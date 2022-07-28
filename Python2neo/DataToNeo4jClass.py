@@ -55,7 +55,7 @@ class DataToNeo4j(object):
             try:
                 print(list(self.matcher.match(self.buy).where("_.name=" + "'" + df_data['buy'][m] + "'")))
                 print(list(self.matcher.match(self.sell).where("_.name=" + "'" + df_data['sell'][m] + "'")))
-                rel = Relationship(self.matcher.match(self.buy).where("_.name=" + "'" + df_data['buy'][m] + "'").first(),
+                rel = Relationship( self.matcher.match(self.buy).where("_.name=" + "'" + df_data['buy'][m] + "'").first(),
                 df_data['money'][m], self.matcher.match(self.sell).where("_.name=" + "'" + df_data['sell'][m] + "'").first())
                 self.graph.create(rel)
             except AttributeError as e:
