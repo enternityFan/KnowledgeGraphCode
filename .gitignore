@@ -3,7 +3,7 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
-
+/RelationExtraction/ltp_data_v3.4.0/
 # Other files and folders
 .settings/
 
